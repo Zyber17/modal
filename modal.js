@@ -33,7 +33,7 @@ function Modal(message,options) {
 		if(location) {
 			element = location.appendChild(this.html);
 		}else {
-			element = document.getElementsByTagName('body')[0].appendChild(this.html);
+			element = document.body.appendChild(this.html);
 		}
 	}
 

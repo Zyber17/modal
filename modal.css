@@ -1,0 +1,61 @@
+.modal {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modalwrapper {
+	font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;
+	color: #111;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.modalwrapper .modalbox {
+	position: absolute;
+	width: 500px;
+	height: 150px;
+	left: 50%;
+	top: 50%;
+	margin-top: -75px;
+	margin-left: -250px;
+	background: #fff;
+	
+	padding: 20px;
+}
+
+.modalwrapper .modalbox h2.modalmessage {
+	padding: 0;
+	margin: 0;
+}
+
+.modalwrapper .modalbox ul.modaloptionul {
+	width: 460px;
+	margin: 10 0;
+	padding: 0;
+}
+
+.modalwrapper .modalbox ul.modaloptionul li.modaloptionli {
+	display: inline-block;
+	list-style: none;
+	width: 50%;
+	padding: 0 10px;
+}
+
+.modalwrapper .modalbox ul.modaloptionul li.modaloptionli:first-of-type {
+	padding-left: 0;
+}
+
+.modalwrapper .modalbox ul.modaloptionul li.modaloptionli:last-of-type {
+	padding-right: 0;
+}
+
+.modalwrapper .modalbox ul.modaloptionul li.modaloptionli button.modaloptionbutton {
+	width: 100%;
+}

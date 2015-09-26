@@ -3,10 +3,11 @@
 <html lang="en">
 	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Modal.js Test</title>
+		<link rel="stylesheet" type="text/css" href="modal.css" />
 		<script src="modal.js"></script>
 		<script type="text/javascript">
 			function test(withLocation) {
-				var test = new Modal('Is this working?',[{name:"No"},{name:"Yes!",callback:function(){alert('It is!');}}]);
+				var test = new Modal('Do you want tor trigger a callback function?',[{name:"No"},{name:"Yes!",callback:function(){alert('You triggered a callback function.');}}]);
 				if(withLocation) {
 					var testDiv = document.getElementById('testDiv');
 					test.draw(testDiv);
@@ -20,9 +21,9 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<button onclick="test(false);">Without location</button>
-			<button onclick="test(true);">With location</button>
-			<div id="testDiv" style="border: 2px solid red; width: 200px; height: 200px;"></div>
+			<button onclick="test(false);">Without location specified</button>
+			<button onclick="test(true);">With location specified</button>
+			<div id="testDiv" style="border: 2px solid red; width: 600px; height: 300px; position: relative;"></div>
 		</div>
 	</body>
 </html>

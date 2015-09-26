@@ -7,6 +7,9 @@ function Modal(message,options) {
 		this.html = document.createElement('div');
 		this.html.setAttribute('class','modal modalwrapper');
 
+		var htmlBox = document.createElement('div');
+		htmlBox.setAttribute('class','modal modalbox');
+
 		var htmlMessage = document.createElement('h2');
 		htmlMessage.setAttribute('class','modal modalmessage');
 		htmlMessage.appendChild((document.createTextNode(this.message)));
@@ -29,8 +32,10 @@ function Modal(message,options) {
 			htmlOptions.appendChild(htmlOptionsLi);
 		};
 
-		this.html.appendChild(htmlMessage);
-		this.html.appendChild(htmlOptions);
+		htmlBox.appendChild(htmlMessage);
+		htmlBox.appendChild(htmlOptions);
+
+		this.html.appendChild(htmlBox);
 
 		if(location) {
 			element = location.appendChild(this.html);

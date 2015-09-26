@@ -20,7 +20,9 @@ function Modal(message,options) {
 
 			var htmlOptionsButton = document.createElement('button');
 			htmlOptionsButton.setAttribute('class', 'modal modaloptionbutton');
-			htmlOptionsButton.onclick = this.dissipate;
+			htmlOptionsButton.addEventListener('click', this.dissipate);
+			if(this.options[i].callback != undefined && typeof this.options[i].callback === 'function') htmlOptionsButton.addEventListener('click', this.options[i].callback);
+			
 			htmlOptionsButton.appendChild((document.createTextNode(this.options[i].name)));
 
 			htmlOptionsLi.appendChild(htmlOptionsButton);
@@ -40,4 +42,5 @@ function Modal(message,options) {
 	this.dissipate = function() {
 		element.remove();
 	}
+	
 }
